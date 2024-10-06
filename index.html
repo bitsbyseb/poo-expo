@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>poo-expo</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/dracula.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/atom-one-dark.css">
+</head>
+<style>
+	h2,
+	h1 {
+		text-transform: capitalize !important;
+	}
+
+	img {
+		margin: 0 !important;
+		object-fit: cover;
+	}
+
+	p {
+		text-align: left;
+	}
+
+	code {
+		color: white !important;
+	}
+</style>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Programación Orientada a Objetos</h2>
+				<ul style="width: 100%; display:grid;grid-template-columns: 1fr 1fr; font-size: 25px;gap: 20px;">
+					<li>Es un modelo de programación que se basa en objetos para organizar el diseño de software. En
+						este
+						paradigma, los programadores se centran en los objetos que necesitan manipular, en lugar de en
+						la
+						lógica necesaria para hacerlo.</li>
+					<li>En la POO, los objetos tienen atributos que representan sus características o propiedades, y
+						métodos que definen las acciones que pueden realizar. Las clases se utilizan para definir la
+						estructura y el comportamiento de los objetos. Una clase actúa como una plantilla o un modelo a
+						partir del cual se crean objetos individuales con características únicas.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Las clases en java</h2>
+				<p>En Java, las clases son una parte fundamental de la POO y son la base para la creación de objetos,
+					que son instancias de esas clases. Una clase en Java es un plano o un modelo que define la
+					estructura y el comportamiento de los objetos que se pueden crear a partir de ella.</p>
+			</section>
+			<!-- --- -->
+			<section>
+				<h2>Uso de una clase en Java</h2>
+				<pre style="width:auto;height: auto;"><code data-trim data-noescape>
+						public class Persona {
+							// Atributos
+							private String nombre;
+							private int edad;
+						
+							// Constructor
+							public Persona(String nombre, int edad) {
+								this.nombre = nombre;
+								this.edad = edad;
+							}
+						
+							// Método
+							public void saludar() {
+								System.out.println("Hola, soy " + nombre + " y tengo " + edad + " años.");
+							}
+						}
+					</code></pre>
+			</section>
+			<!-- -- -->
+			<section>
+				<h2>Conceptos fundamentales de las clases</h2>
+			</section>
+			<!--  -->
+			<section>
+				<h2>Atributos</h2>
+				<p>Las clases pueden tener atributos, también conocidos como variables de instancia, que representan las
+					características o propiedades del objeto.</p>
+				<pre style="width: auto;height: auto;"><code data-trim data-noescape data-line-numbers="3-4">
+					public class Persona {
+						// Atributos
+						public String nombre;
+						public int edad;
+					}
+				</code></pre>
+			</section>
+			<!-- -- -->
+			<section>
+				<h2>Metodos</h2>
+				<p style="font-size: 25px;">Son funciones propias de la clase que representan el comportamiento del
+					objeto, pueden manipular los
+					atributos, en el ejemplo de la clase Persona, saludar es una accion y refleja un comportamiento de
+					esa persona.
+				</p>
+				<pre style="height: auto;"><code data-trim data-noescape data-line-numbers="6-8">
+					public class Persona {
+						// Atributos
+						public String nombre = "Sebastian";
+						public int edad = 18;
+						// Método
+						public void saludar() {
+							System.out.println("Hola, soy " + nombre + " y tengo " + edad + " años.");
+						}
+					}
+				</code></pre>
+			</section>
+			<!-- --- -->
+			<section>
+				<h2>Constructor</h2>
+				<p style="font-size: 25px;">El constructor es un metodo especial al cual nos sirve cuando estamos
+					creando un objeto o instancia
+					de nuestra clase, es util cuando queremos incializar ciertos atributos y hacer mas personalizable el
+					comportamiento de nuestro objeto.
+				</p>
+				<pre style="height: auto;"><code data-trim data-noescape data-line-numbers="7-10,2-4">
+					public class Persona {
+						// Atributos
+						private String nombre;
+						private int edad;
+					
+						// Constructor
+						public Persona(String nombre, int edad) {
+							this.nombre = nombre;
+							this.edad = edad;
+						}
+					}
+				</code></pre>
+			</section>
+			<!-- --- -->
+			<section>
+				<h2>Encapsulamiento</h2>
+				<p style="font-size: 25px;">Es un principio de la POO que se refiere a la ocultación de los detalles de
+					implementación de una
+					clase y la exposición controlada de sus atributos y métodos. En Java, puedes utilizar modificadores
+					de acceso como private, protected, public, etc., para controlar el acceso a los miembros de una
+					clase.</p>
+				<pre style="height: auto;"><code data-trim data-noescape data-line-numbers="2,5-8">
+					class Bancolombia {
+						private String numeroCuenta;
+						public String Nombre;
+						public int edad;
+						Bancolombia(String numeroCuenta, String Nombre,int edad) {
+							this.Nombre = Nombre;
+							this.edad = edad;
+							this.numeroCuenta = numeroCuenta;
+						}
+					}
+					</code></pre>
+			</section>
+			<!--  -->
+			<section>
+				<h2>Como Crear Objetos En Java</h2>
+				<pre><code data-trim data-noescape>
+					public class Persona {
+						// Atributos
+						private String nombre;
+						private int edad;
+					
+						// Constructor
+						public Persona(String nombre, int edad) {
+							this.nombre = nombre;
+							this.edad = edad;
+						}
+					
+						// Método
+						public void saludar() {
+							System.out.println("Hola, soy " + nombre + " y tengo " + edad + " años.");
+						}
+					}
+
+					Persona fulano = new Persona("Fulano",25);
+					</code></pre>
+			</section>
+			<!--  -->
+			<section>
+				<h2>Herencia</h2>
+				<p style="font-size: 25px;">Las clases pueden heredar atributos y métodos de otras clases. La herencia
+					permite la creación de
+					jerarquías de clases, donde una clase (subclase o clase derivada) puede extender o heredar
+					características de otra clase (superclase o clase base).</p>
+				<pre><code data-trim data-noescape>
+					class Animal {
+
+						String nombre;
+					
+						public void comer() {
+							System.out.println("El animal está comiendo.");
+						}
+					}
+					
+					class Perro extends Animal {
+					
+						public void ladrar() {
+							System.out.println("El perro está ladrando.");
+						}
+					}
+				</code></pre>
+			</section>
+			<!-- -- -->
+			<section>
+				<h2>Los modificadores de acceso</h2>
+				<p>Los modificadores de acceso en Java son palabras clave que definen el nivel de acceso que tienen las
+					clases, métodos y atributos desde otras partes del código. Sirven para controlar qué tan accesible
+					es cada parte del código y proteger la información según sea necesario.</p>
+			</section>
+			<!-- -- -->
+			<section>
+				<h2>public</h2>
+				<p style="font-size: 25px;">El modificador public indica que la clase, método o atributo es accesible
+					desde cualquier parte del código, tanto dentro del mismo paquete como desde otros paquetes.</p>
+				<pre><code data-trim data-noescape>
+					public class Libro {
+						public String titulo;
+
+						// Constructor público
+						public Libro(String titulo) {
+							this.titulo = titulo;
+						}
+
+						// Método público para obtener el título del libro
+						public String getTitulo() {
+							return this.titulo;
+						}
+					}
+				</code></pre>
+			</section>
+			<!-- --- -->
+			<section>
+				<h2>Private</h2>
+				<p>El modificador private restringe el acceso de la clase, método o atributo. Solo es accesible
+					dentro
+					de la misma clase. Es útil para proteger la información sensible.</p>
+			</section>
+			<!-- -- -->
+			<section>
+				<pre><code data-trim data-noescape>
+					// Clase que representa una cuenta bancaria
+					public class CuentaBancaria {
+						// Atributo privado: solo accesible desde la clase CuentaBancaria
+						private double saldo;
+
+						// Constructor para inicializar el saldo
+						public CuentaBancaria(double saldoInicial) {
+							this.saldo = saldoInicial;
+						}
+
+						// Método público para consultar el saldo
+						public double consultarSaldo() {
+							return this.saldo;
+						}
+
+						// Método público para depositar dinero
+						public void depositar(double cantidad) {
+							this.saldo += cantidad;
+						}
+					}
+				</code></pre>
+			</section>
+			<!-- -- -->
+			<section>
+				<h2>Protected</h2>
+				<p>El modificador protected permite que el miembro de la clase sea accesible desde clases del mismo
+					paquete o desde clases que heredan de esta. Es útil en situaciones de herencia.</p>
+			</section>
+			<!--  -->
+			<section>
+				<pre><code data-trim data-noescape>
+					// Clase que representa un empleado
+					public class Empleado {
+						// Atributo protegido: accesible solo desde la clase y sus hijas
+						protected String nombre;
+
+						// Constructor
+						public Empleado(String nombre) {
+							this.nombre = nombre;
+						}
+
+						// Método protegido: solo accesible en esta clase y sus subclases
+						protected String obtenerNombre() {
+							return this.nombre;
+						}
+					}
+
+					// Clase hija que representa un gerente
+					public class Gerente extends Empleado {
+						
+						public Gerente(String nombre) {
+							super(nombre);
+						}
+
+						// Método para mostrar el nombre del gerente
+						public void mostrarNombre() {
+							System.out.println("Nombre del gerente: " + obtenerNombre());
+						}
+					}
+				</code></pre>
+			</section>
+			<!-- -- -->
+			<section>
+				<h2 style="font-size: 45px;"> Modificador de acceso por defecto (sin palabra clave)</h2>
+				<p style="font-size: 25px;">Si no se especifica un modificador de acceso, se aplica el acceso por
+					defecto, también llamado
+					"paquete" o "friendly". Solo es accesible dentro del mismo paquete.</p>
+				<pre><code data-trim data-noescape>
+						// Clase que representa un producto en una tienda
+						class Producto {
+							// Atributo con acceso por defecto
+							double precio;
+
+							// Constructor
+							Producto(double precio) {
+								this.precio = precio;
+							}
+
+							// Método con acceso por defecto para consultar el precio
+							double obtenerPrecio() {
+								return this.precio;
+							}
+						}
+					</code></pre>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
