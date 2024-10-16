@@ -331,6 +331,79 @@
 						}
 					</code></pre>
 			</section>
+			<!-- -- -->
+			<section>
+				<h2>Los Getters y Setters En Java</h2>
+				<p>Son tipos de metodos que definen como se accede a una propiedad</p>
+			</section>
+			<!-- -- -->
+			<section>
+				<h2>Los Getters</h2>
+				<p style="font-size: 25px;">Son metodos (funciones) los cuales solo pueden retornar un valor, osea que
+					no pueden recibir
+					argumentos como un metodo normal, pero siempre tienen que retornar algo, ese algo puede ser
+					una propiedad dentro del objeto, como un getter que retorne un dato bancario en una clase
+					banco.
+				</p>
+				<pre><code data-trim data-noescape>
+								class Bancolombia {
+									private String numeroCuenta;
+									public String Nombre;
+									public int edad;
+									Bancolombia(String numeroCuenta, String Nombre,int edad) {
+										this.Nombre = Nombre;
+										this.edad = edad;
+										this.numeroCuenta = numeroCuenta;
+									}
+									public String obtenerNumeroDeCuenta() {
+										return this.numeroCuenta;
+									}
+								}
+							</code></pre>
+			</section>
+			<!-- -- -->
+			<section>
+				<h2>Los Setters</h2>
+				<p style="font-size: 25px;">Los setters son metodos especiales que solo son utiles a la hora de editar
+					el valor de una variable
+					dentro del objeto y no deberian retornar nada pero reciben solamente un parametro, el cual se va a
+					convertir en el nuevo valor de la variable que queremos editar, son utiles pues
+					podemos asegurarnos de que el valor ingresado cumpla ciertas reglas o especificaciones para esa
+					propiedad.
+				</p>
+				<pre>
+					<code data-trim data-noescape>
+						class Bancolombia {
+							private String numeroCuenta;
+							public String Nombre;
+							public int edad;
+							Bancolombia(String numeroCuenta, String Nombre,int edad) {
+								this.Nombre = Nombre;
+								this.edad = edad;
+								this.numeroCuenta = numeroCuenta;
+							}
+							public void colocarNombre(String nombre) {
+								this.Nombre = nombre;
+							}
+						}
+					</code>
+				</pre>
+			</section>
+			<!-- -- -->
+			<section>
+				<h2>Ejercicios con Getters y Setters</h2>
+				<p>Crea una clase Libro que tenga los atributos privados titulo, autor, y numPaginas. Implementa
+					getters y setters para estos atributos. El setter para numPaginas debe asegurarse de que el
+					número de páginas sea mayor que cero. </p>
+			</section>
+			<!-- -- -->
+			<section>
+				<h2>Ejercicios con Getters y Setters</h2>
+				<p>Crea una clase Producto que tenga los atributos privados nombre y precio. El precio debe ser un
+					valor positivo. Implementa getters y setters, pero asegúrate de que el setter del precio solo
+					acepte valores positivos. </p>
+			</section>
+
 		</div>
 	</div>
 
